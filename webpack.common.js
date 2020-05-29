@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-
   /* here you can define another js file */
   entry: {
     index: "./src/js/index.js",
@@ -45,8 +45,12 @@ module.exports = {
     port: 8080,
   },
 
-  /* here you can define another html file and its dependencies */
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: "public" }],
+    }),
+
+    /* here you can define another html file and its dependencies */
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,

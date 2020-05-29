@@ -1,9 +1,13 @@
 @import "~normalize.css";
+
 @import "_variables";
+@import "modules/hello.scss";
 
 body {
-    background: $wtf;
-    color: #fff;
-    background: url('../assets/img/korsan-header.jpg');
-    font-size: 50px;
+  background: $wtf;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }

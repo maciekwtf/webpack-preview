@@ -25,6 +25,18 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.css$/i,
+        loader: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
     ],
   },
 

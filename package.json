@@ -1,5 +1,5 @@
 {
-  "name": "wtf-webpack-config",
+  "name": "wtf-webpack-starterkit",
   "version": "1.0.0",
   "description": "WTF Webpack starterkit",
   "main": "index.js",
@@ -7,10 +7,14 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development",
     "build": "webpack --config webpack.prod.js --mode production",
-    "preview": "npm run build && http-server dist"
+    "preview": "npm run build && http-server dist",
+    "publish": "npm run build && gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Webpack",
+    "boilerplate"
+  ],
+  "author": "Maciek Korsan",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.1",
@@ -21,6 +25,7 @@
     "copy-webpack-plugin": "^6.0.1",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
